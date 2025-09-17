@@ -2,5 +2,6 @@
 
 ##WEBVR
 
-*[texture](/WebVr/vr.html)
+*[texture](../WebVr/)
+
 

@@ -2,7 +2,8 @@
 
 ## WEBVR
 
-* [texture](./vr.html)
+* [texture](https://saraql.github.io/WebVR/vr.html)
+
 
 
 

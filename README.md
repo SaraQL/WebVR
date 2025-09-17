@@ -2,7 +2,8 @@
 
 ## WEBVR
 
-* [texture](SaraQL/WebVr/)
+* [texture](./vr.html)
+
 
 
 

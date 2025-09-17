@@ -1,4 +1,5 @@
 #aframe
 
 ##WEBVR
-*[texture](../WebVr/vr.html)
+
+*[texture]([../WebVr/vr.html](https://saraql.github.io/WebVR/vr.html))

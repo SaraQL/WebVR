@@ -1,1 +1,1 @@
-# WebVR_Minet
+# WebVR

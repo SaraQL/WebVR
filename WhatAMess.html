@@ -6,100 +6,86 @@
   <body>
     <a-scene>
       <!-- initialisation les images -->
-       <asset>
+      <asset>
         <img id="solTexture" src="./assets_mess/img/sol.jpg">
         <img id="plafondTexture" src="./assets_mess/img/plafond.jpg">
         <img id="murTexture" src="./assets_mess/img/mur.jpg">
-
-        <a-mixin id="murs" repeat="6 6" geometry="height:2; width:3"></a-mixin>
-       </asset>
+        <img id="liquideTexture" src="./assets_mess/img/liquide.jpg">
+      
+      
+        <a-mixin id="murs" repeat="6 6" geometry="height:2; width:3" material="side:double; color:#702c3b"></a-mixin>
+      </asset>
+        <a-mixin id="sol_plafond" geometry="height:3; width:3" material="side:double; color:#543227"></a-mixin>
+      </asset>
 
       <!-- initialiasation des objets -->
-        <!-- le crâne -->
-          <a-asset-item id="skull-obj" src="assets_mess/modeles3D/skull/12140_Skull_v3_L2.obj"></a-asset-item>
-          <a-asset-item id="skull-mtl" src="assets_mess/modeles3D/skull/12140_Skull_v3_L2.mtl"></a-asset-item>
+        <!-- fichiers OBJ-->
+          <a-asset-item id="crane-obj" src="assets_mess/modeles3D/skull/12140_Skull_v3_L2.obj"></a-asset-item>
+          <a-asset-item id="crane-mtl" src="assets_mess/modeles3D/skull/12140_Skull_v3_L2.mtl"></a-asset-item>
 
-        <!-- le livre -->
-          <a-asset-item id="book-obj" src="assets_mess/modeles3D/book/book.obj"></a-asset-item>
-          <a-asset-item id="book-mtl" src="assets_mess/modeles3D/book/book.mtl"></a-asset-item>
+          <a-asset-item id="livre-obj" src="assets_mess/modeles3D/book/book.obj"></a-asset-item>
+          <a-asset-item id="livre-mtl" src="assets_mess/modeles3D/book/book.mtl"></a-asset-item>
 
-        <!-- la nourriture -->
-          <a-asset-item id="pain" src="assets_mess/modeles3D/bread/scene.gltf"></a-asset-item>
-          <a-asset-item id="verre" src="assets_mess/modeles3D/verre/scene.gltf"></a-asset-item>
-        
-        <!-- la fenêtre -->
-         <a-asset-item id="fenetre" src="assets_mess/modeles3D/fenetre/scene.gltf"></a-asset-item>
-
-        <!-- la table -->
-         <a-asset-item id="table" src="assets_mess/modeles3D/table/scene.gltf"></a-asset-item>
-        <!-- la bibliothèque -->
+        <!-- fichiers GLB -->
           <a-asset-item id="biblio-glb" src="assets_mess/modeles3D/book_shelf.glb"></a-asset-item>
+
+          <a-asset-item id="chaudron-glb" src="assets_mess/modeles3D/cauldron.glb"></a-asset-item>
         
-        <!-- le statue -->
-          <a-asset-item id="poupee-glb" src="assets_mess/modeles3D/doll.glb"></a-asset-item>
+          <a-asset-item id="grenouille-glb" src="assets_mess/modeles3D/frog.glb"></a-asset-item>
 
-        <!-- la déco murale -->
-          <a-asset-item id="arbre_mur" src="assets_mess/modeles3D/arbre_mur/scene.gltf"></a-asset-item>
-
-        <!-- la bougie -->
-          <a-asset-item id="bougie" src="assets_mess/modeles3D/bougies/scene.gltf"></a-asset-item>
-
-        <!-- la photo -->
-          <a-asset-item id="photo" src="assets_mess/modeles3D/photo/scene.gltf"></a-asset-item>
-
-        <!-- la roue -->
-          <a-asset-item id="roue-glb" src="assets_mess/modeles3D/spinning_wheel.glb"></a-asset-item>
-
-        <!-- la chaise -->
-          <a-asset-item id="chaise-glb" src="assets_mess/modeles3D/victorian_chair.glb"></a-asset-item>
-
-        <!-- la chaise -->
-          <a-asset-item id="chandelier-glb" src="assets_mess/modeles3D/victorian_chandelier.glb"></a-asset-item>
+        <!-- fichiers GLTF -->
+          <a-asset-item id="souris" src="assets_mess/modeles3D/mouse/scene.gltf"></a-asset-item>
+        
+          <a-asset-item id="cristal" src="assets_mess/modeles3D/cristal/scene.gltf"></a-asset-item>
 
   
       <!-- le décor -->
         <!-- les meubles -->
           <a-entity gltf-model="#biblio-glb" position="-1.25 0 0.25" rotation="0 90 0" scale="0.8 0.8 0.8" static-body></a-entity>
-          <a-entity gltf-model="#poupee-glb"position="-1.14599 -0.09055 -1.20831" rotation="0 59.99999999999999 0" scale="1.1 1.1 1.1" dynamic-body="sphereRadius: NaN" velocity=""></a-entity>
-          <a-entity gltf-model="#table" position="0.5 0 -0.30" scale="0.4 0.4 0.4" static_body></a-entity>
-          <a-entity gltf-model="#arbre_mur" position="0.25 1 -1.5" rotation="0 0 0" scale="0.8 0.8 0.8" static-body></a-entity>
-          <a-entity gltf-model="#roue-glb" position="1.01712 0 0.56452" rotation="0 90 0" scale="0.8 0.8 0.8" static-body></a-entity>
-          <a-entity gltf-model="#chaise-glb" position="-0.15 0 1.11459" rotation="0 110 0" scale="15 15 15" static-body></a-entity>
-          <a-entity gltf-model="#chaise-glb" position="-0.1905 0 0" rotation="0 -80 0" scale="15 15 15" static-body></a-entity>
-          <a-entity gltf-model="#chandelier-glb" position="0 2 0" rotation="0 0 0" scale="100 100 100" static-body></a-entity>
-          
+          <a-entity gltf-model="#biblio-glb" position="0 0 -1.25" rotation="0 0 0" scale="0.7 0.8 0.75" static-body></a-entity>
+          <a-entity gltf-model="#biblio-glb" position="1.25 0 0.4" rotation="0 -90 0" scale="0.8 0.8 0.8" static-body></a-entity>
+          <a-entity gltf-model="#chaudron-glb" position="0 0 0" rotation="0 90 0" scale="1 1 1" static-body></a-entity>
+          <a-circle id="liquide" src="#liquideTexture" radius=0.4 position="0 0.8 0" rotation="-90 0 0" color="#7a95ff" opacity="0.5"></a-circle>
 
         <!-- les décos -->
-          <a-entity obj-model="obj: #skull-obj; mtl: #skull-mtl" position="0.25 0.8 -0.25" rotation="-120 0 0" scale="0.01 0.01 0.01"></a-entity>
-          <a-entity gltf-model="#photo" position="1.45 1.25 0.2" rotation="0 180 0" scale="0.4 0.4 0.4" static-body></a-entity>
-          <a-entity gltf-model="#pain" position="0.8 0.8 -0.25" scale="0.05 0.05 0.05"></a-entity>
-          <a-entity gltf-model="#bougie" position="0.16598 0.8 -0.141" scale="0.5 0.5 0.5"></a-entity>
-          <a-entity gltf-model="#verre" position="0.61492 0.91493 -0.13803" rotation="0 0 -14.665427724168552" scale="0.05 0.05 0.05" dynamic-body></a-entity>
-
-        <!-- lot de fenêtres-->
-          <a-entity gltf-model="#fenetre" position="0.5 1.25 1.25" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
-          <a-entity gltf-model="#fenetre" position="-0.5 1.25 1.25" rotation="0 0 0" scale="0.5 0.5 0.5"></a-entity>
-          <a-entity gltf-model="#fenetre" position="1.45 1.25 0.75" rotation="0 90 0" scale="0.5 0.5 0.5"></a-entity>
-          <a-entity gltf-model="#fenetre" position="1.45 1.25 -0.75" rotation="0 90 0" scale="0.5 0.5 0.5"></a-entity>
-
-        <!-- lot de livres  -->
-          <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="-0.425 0.04 -1.10" scale="0.1 0.1 0.1" static-body></a-entity>
-          <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="-0.6 0.1 -0.7" rotation="20 20 180" scale="0.1 0.1 0.1" dynamic-body></a-entity>
-          <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="-1 0.70 -0.5" rotation="80 90 2.5" scale="0.1 0.1 0.1" static-body></a-entity>
-          <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="0 0.85 -0.5" rotation="0 0 0" scale="0.1 0.1 0.1" ></a-entity>
-          <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="-0.48893 0.04 0.40221" rotation="0 180 0" scale="0.1 0.1 0.1"></a-entity>
-          <a-entity obj-model="obj: #book-obj; mtl: #book-mtl" position="0 0.04 -0.5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+          <a-entity gltf-model="#cristal" position="0 1 0" rotation="0 90 0" scale="0.05 0.05 0.05" static-body></a-entity>
+         
+          <!-- lot de crânes -->
+            <!-- ceux qui ne tombent pas -->
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 0.8 0.8" rotation="-60 180 180" scale="0.01 0.01 0.01"></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 0.8 -0.2" rotation="-60 -90 180" scale="0.01 0.01 0.01"></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.7 0.8 -0.2" rotation="-60 90 -180" scale="0.01 0.01 0.01"></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.6 0.8 0.6" rotation="-60 120 -180" scale="0.01 0.01 0.01"></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.6 0.8 0.6" rotation="-60 -120 180" scale="0.01 0.01 0.01"></a-entity>
+            <!-- ceux qui tombent -->
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 1.5 0.8" rotation="-60 180 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 1.5 -0.2" rotation="-60 -90 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.7 1.5 -0.2" rotation="-60 90 -180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.6 1.5 0.6" rotation="-60 120 -180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.6 1.5 0.6" rotation="-60 -120 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+            
+          <!-- lot de livres  -->
+            <a-entity obj-model="obj: #livre-obj; mtl: #livre-mtl" position="0.25 0.04 1.128" rotation="0 145 180" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj: #livre-obj; mtl: #livre-mtl" position="-1.01 0.36 0.6" rotation="1.28 -6.5 173" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj: #livre-obj; mtl: #livre-mtl" position="-0.49 0.04 0.4" rotation="0 180 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj: #livre-obj; mtl: #livre-mtl" position="-1 0.7 -0.5" rotation="80 90 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj: #livre-obj; mtl: #livre-mtl" position="1.06 0.7 1.17" rotation="-53 85 -179.5" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity obj-model="obj: #livre-obj; mtl: #livre-mtl" position="1.19 0.02 -1.15" rotation="0 0 -173.6" scale="0.1 0.1 0.1" ></a-entity>
         
-          <!-- lot de pains -->
-          <a-entity gltf-model="#pain" position="-0.80 0.31417 0.6" rotation="0 43 0" scale="0.05 0.05 0.05" dynamic-body></a-entity>
-          <a-entity gltf-model="#pain" position="0.8 0.8 -0.25" scale="0.05 0.05 0.05"></a-entity>
-          <a-entity gltf-model="#pain" position="-1 0.31417 0.4" scale="0.05 0.05 0.05"></a-entity>
-          <a-entity gltf-model="#pain" position="-0.9 0.31417 0.1" rotation="0 105 0" scale="0.04 0.04 0.04" color="beige"></a-entity>
+        <!-- les animaux -->
+          <a-entity gltf-model="#grenouille-glb" position="0.6 1.038 -0.2" rotation="-17.2 90 0" scale="0.8 0.8 0.8"></a-entity>
+          <a-entity gltf-model="#grenouille-glb" position="-0.26 1 0.166" rotation="0 -145.6 0" scale="0.48 0.48 0.48"></a-entity>
           
+          <a-entity gltf-model="#souris" position="-1 0.56 1.15" rotation="0 -131.66913906783395 0" scale="0.3 0.3 0.3"></a-entity>
+          <a-entity gltf-model="#souris" position="-0.35 0.07 0.035" rotation="0 -165 0" scale="0.3 0.3 0.3"></a-entity>
+          <a-entity gltf-model="#souris" position="1 0.377 0.5" rotation="0 -62 0" scale="0.3 0.3 0.3"></a-entity>
+          <a-entity gltf-model="#souris" position="-1.2 0.3 -0.95" rotation="46.25 -138 -15" scale="0.6 0.6 0.6"></a-entity>
+      
+      
       <!-- l'environnement -->
         <!-- le sol et le plafond-->
-        <a-plane id="sol" src="#solTexture" position="0 0 0" rotation="-90 0 0" width="3" height="3" color="#543227"static-body></a-plane>
-        <a-plane id="plafond" src="#plafondTexture" repeat="15 15"position="0 2 0" rotation="90 0 0" width="3" height="3" color="beige" static-body></a-plane>
+        <a-plane id="sol" src="#solTexture" mixin="sol_plafond" position="0 0 0" rotation="-90 0 0" static-body></a-plane>
+        <a-plane id="sol" src="#solTexture" mixin="sol_plafond" position="0 2 0" rotation="90 0 0" static-body></a-plane>
         
         <!-- les murs -->
         <a-plane id="mur" src="#murTexture" mixin="murs" position="0 1 -1.5" rotation="0 0 0" static-body></a-plane>
@@ -108,7 +94,8 @@
         <a-plane id="mur" src="#murTexture" mixin="murs" position="1.5 1 0" rotation="0 -90 0" static-body></a-plane>
 
         <a-entity light="type: ambient; color:#91815e"></a-entity>
-        <a-camera look-controls wasd-controls position="0 1.6 0.5"></a-camera>
+        <a-entity light="type: point; intensity: 0.75; distance: 3; decay: 3" position="0 1.1 0"></a-entity>
+        <a-camera look-controls  wasd-controls="acceleration:10" position="0 1.6 1.5" ></a-camera>
         <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>

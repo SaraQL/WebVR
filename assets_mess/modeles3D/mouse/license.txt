@@ -1,0 +1,11 @@
+Model Information:
+* title:	Field Mouse
+* source:	https://sketchfab.com/3d-models/field-mouse-f201c715687141378159e4ba1285c9f7
+* author:	Mewn (https://sketchfab.com/meewn)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Field Mouse" (https://sketchfab.com/3d-models/field-mouse-f201c715687141378159e4ba1285c9f7) by Mewn (https://sketchfab.com/meewn) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

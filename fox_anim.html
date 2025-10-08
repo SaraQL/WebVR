@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="fox" src="/assets/3Danims/fox/fox.glb"></a-asset-item>
+      </a-assets>
+
+      <a-entity id="animal">
+        <a-entity gltf-model="#fox" animation-mixer wasd-controls rotation="0 -90 0" position="0 0 -3" scale="0.1 0.1 0.1"></a-entity>
+      </a-entity>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-entity camera="active: true" look-controls position="0 1.6 0"></a-entity>
+    </a-scene>
+  </body>
+</html>

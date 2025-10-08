@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-ar@0.2.1-a/dist/aframe-ar.min.js"></script>
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js" sur le site : https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html></script> -->
+  </head>
+  <body>
+    <a-scene arjs>
+      <a-assets>
+        <a-asset-item id="chat" src="/assets/3Danims/cat/an_animated_cat.glb"></a-asset-item>
+      </a-assets>
+
+      <a-entity id="animal">
+        <a-entity gltf-model="#chat" animation-mixer rotation="0 -90 0" position="0 0 -3" scale="0.1 0.1 0.1"></a-entity>
+      </a-entity>
+
+      <a-entity camera="active: true" look-controls  wasd-controls position="0 1.6 0"></a-entity>
+    </a-scene>
+  </body>
+</html>

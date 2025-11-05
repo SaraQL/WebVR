@@ -17,19 +17,19 @@
       <!-- INITIATION DES OBJETS -->
 
         <!-- fichiers OBJ-->
-          <a-asset-item id="crane-obj" src="assets_mess/modeles3D/skull/12140_Skull_v3_L2.obj"></a-asset-item>
-          <a-asset-item id="crane-mtl" src="assets_mess/modeles3D/skull/12140_Skull_v3_L2.mtl"></a-asset-item>
+          <a-asset-item id="crane-obj" src="./assets_mess/modeles3D/skull/12140_Skull_v3_L2.obj"></a-asset-item>
+          <a-asset-item id="crane-mtl" src="./assets_mess/modeles3D/skull/12140_Skull_v3_L2.mtl"></a-asset-item>
 
-          <a-asset-item id="livre-obj" src="assets_mess/modeles3D/book/book.obj"></a-asset-item>
-          <a-asset-item id="livre-mtl" src="assets_mess/modeles3D/book/book.mtl"></a-asset-item>
+          <a-asset-item id="livre-obj" src="./assets_mess/modeles3D/book/book.obj"></a-asset-item>
+          <a-asset-item id="livre-mtl" src="./assets_mess/modeles3D/book/book.mtl"></a-asset-item>
 
         <!-- fichiers GLB -->
-          <a-asset-item id="biblio-glb" src="assets_mess/modeles3D/book_shelf.glb"></a-asset-item>
+          <a-asset-item id="biblio-glb" src="./assets_mess/modeles3D/book_shelf.glb"></a-asset-item>
         
-          <a-asset-item id="grenouille-glb" src="assets_mess/modeles3D/frog.glb"></a-asset-item>
+          <a-asset-item id="grenouille-glb" src="./assets_mess/modeles3D/frog.glb"></a-asset-item>
 
         <!-- fichiers GLTF -->
-          <a-asset-item id="souris" src="assets_mess/modeles3D/mouse/scene.gltf"></a-asset-item>
+          <a-asset-item id="souris" src="./assets_mess/modeles3D/mouse/scene.gltf"></a-asset-item>
 
 
       <!-- EMPLACEMENT DES OBJETS -->
@@ -76,12 +76,12 @@
               <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 1.3 0.6" rotation="-90 90 180" scale="0.01 0.01 0.01"></a-entity>
                   
             <!-- ceux qui tombent -->
-              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 1.75 0.8" rotation="-120 0 180" scale="0.01 0.01 0.01"></a-entity>
-              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 1.75 -0.8" rotation="-120 180 180" scale="0.01 0.01 0.01"></a-entity>
-              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 1.75 -0.4" rotation="-120 90 180" scale="0.01 0.01 0.01"></a-entity>
-              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.7 1.75 -0.4" rotation="-120 -90 -180" scale="0.01 0.01 0.01"></a-entity>              
-              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.7 1.75 0.6" rotation="-120 -90 -180" scale="0.01 0.01 0.01"></a-entity>
-              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 1.75 0.6" rotation="-120 90 180" scale="0.01 0.01 0.01"></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 1.75 0.8" rotation="-120 0 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 1.75 -0.8" rotation="-120 180 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 1.75 -0.4" rotation="-120 90 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.7 1.75 -0.4" rotation="-120 -90 -180" scale="0.01 0.01 0.01" dynamic-body></a-entity>              
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="-0.7 1.75 0.6" rotation="-120 -90 -180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
+              <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0.7 1.75 0.6" rotation="-120 90 180" scale="0.01 0.01 0.01" dynamic-body></a-entity>
               
             <!-- ceux dans les coins  -->
               <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="1 1.4 -1" rotation="-75 -75 25" scale="0.015 0.015 0.015"></a-entity>
@@ -110,4 +110,5 @@
 
     </a-scene>
   </body>
+
 </html>

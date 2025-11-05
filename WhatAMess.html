@@ -58,7 +58,7 @@
             <a-entity gltf-model="#biblio-glb" position="0 0 1.25" rotation="0 180 0" scale="0.65 0.8 0.7" static-body></a-entity>
 
 
-          <!-- lot de crânes -->
+          <!-- lot de crânes : look-at impossible dû au physic system. Le look-at ne fonctionne pas avec dynamic/Static-body (d'après le chat de mistral.ai)-->
             <!-- ceux du bas -->
               <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 0.8 0.8" rotation="-60 0 180" scale="0.01 0.01 0.01"></a-entity>
               <a-entity obj-model="obj: #crane-obj; mtl: #crane-mtl" position="0 0.8 -0.8" rotation="-60 180 180" scale="0.01 0.01 0.01"></a-entity>
@@ -112,3 +112,4 @@
   </body>
 
 </html>
+
